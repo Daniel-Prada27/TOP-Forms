@@ -3,16 +3,26 @@
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+:root.dark {
+    --text-color: white;
+    --bg-color: #212121;
+    --border-color: rgb(77,77,77);
+}
 
-
-
+:root.light {
+    --text-color: black;
+    --bg-color: white;
+    --border-color: #E5E7EB;
+}
 
 * {
     font-family: var(--system-ui);
     color: #232324;
 }
 
-
+p {
+    color: var(--text-color);
+}
 @font-face {
     font-family: Norse;
     src: url("/assets/images/Norse-Bold.otf") format("opentype");
@@ -99,12 +109,22 @@ div {
     width: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #F9FAFB;
+    justify-content: flex-start;
+    background-color: var(--bg-color);
 }
 
 .right-side > * {
     margin-left: 30px;
+}
+
+.theme-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 5px 20px 0px;
+}
+
+#themeToggle {
+    padding: 5px;
 }
 
 .top-content > p {
@@ -113,9 +133,11 @@ div {
     font-weight: bold;
     max-width: 60%;
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .emphasize {
+    color: var(--text-color);
     font-style: italic;
 }
 
@@ -127,7 +149,9 @@ div {
 .mid-content > * {
     margin-left: 30px;
 }
-
+h3 {
+    color: var(--text-color);
+}
 .row {
     display: flex;
     justify-content: flex-start;
@@ -145,12 +169,14 @@ div {
 label {
     font-family: var(--system-ui);
     font-size: 0.7rem;
+    color: var(--text-color);
 }
 
 input {
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     width: 100%;
+    background-color: var(--bg-color);
 }
 
 input:focus {
