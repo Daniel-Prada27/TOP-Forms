@@ -1,18 +1,21 @@
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        --border-focus-color: rgb(75, 75, 255);
 }
 
 :root.dark {
     --text-color: white;
     --bg-color: #212121;
     --border-color: rgb(77,77,77);
+    --border-focus-color: rgb(75, 75, 255);
 }
 
 :root.light {
     --text-color: black;
     --bg-color: white;
     --border-color: #E5E7EB;
+    --border-focus-color: rgb(75, 75, 255);
 }
 
 * {
@@ -177,10 +180,12 @@ input {
     border-radius: 3px;
     width: 100%;
     background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 input:focus {
-    border-color: rgb(75, 75, 255);
+    border-color: var(--border-focus-color);
+    border: rgb(75, 75, 255);
     outline: none;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 5px, rgba(17, 17, 26, 0.1) 0px 8px 14px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
@@ -203,6 +208,10 @@ button {
     background-color: #596D48;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #647c4f;
 }
 
 button:active {
