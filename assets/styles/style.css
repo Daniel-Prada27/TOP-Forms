@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 div {
@@ -83,7 +83,7 @@ div {
     height: 10vh;
 }
 
-#right-side {
+.right-side {
     height: 100vh;
     width: 60vw;
     display: flex;
@@ -92,7 +92,7 @@ div {
     background-color: #F9FAFB;
 }
 
-#right-side > div {
+.right-side > * {
     margin-left: 30px;
 }
 
@@ -108,3 +108,64 @@ div {
     font-style: italic;
 }
 
+.mid-content {
+    margin-left: 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.mid-content > * {
+    margin-left: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    min-width: 0;
+}
+.right-col {
+    margin-left: 60px;
+}
+
+.label-input-group {
+    width: 200px;
+}
+
+label {
+    font-family: var(--system-ui);
+    font-size: 0.7rem;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    width: 100%;
+}
+
+input:focus {
+    border-color: rgb(75, 75, 255);
+    outline: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 5px, rgba(17, 17, 26, 0.1) 0px 8px 14px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+#password:invalid {
+    border-color: red;
+    
+}
+
+
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
