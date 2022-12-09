@@ -3,9 +3,81 @@
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+@font-face {
+    font-family: 'Norse';
+    font-size: 18px;
+    src: url('/assets/images/Norse-Bold.otf') format("OpenType");
+  }
+
 body {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     margin: 0;
+    overflow-y: hidden;
+}
+
+div {
+    margin: 0px;
+}
+
+#left-side {
+    width: 30vw;
+    height: 100vh;
+}
+
+.card-container {
+    position: relative;
+
+}
+
+.card-img {
+    /* position: absolute; */
+    width: 30vw;
+    height: 100vh;
+    margin: 0px;
+    z-index: -1;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 8rem;
+    color: white;
+    z-index: 1;
+}
+
+.card-heading {
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    text-align: center;
 }
 
 
+.attempt {
+    display: flex;
+    justify-content: center;
+    font-family: var(--system-ui);
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.attempt > h2 {
+    font-family: 'Norse', var(--system-ui);
+}
+
+.attempt > img {
+    height: 10vh;
+}
+
+#right-side {
+    background-color: blue;
+    height: 100vh;
+}
