@@ -185,7 +185,6 @@ input {
 
 input:focus {
     border-color: var(--border-focus-color);
-    border: rgb(75, 75, 255);
     outline: none;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 5px, rgba(17, 17, 26, 0.1) 0px 8px 14px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
