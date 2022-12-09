@@ -2,11 +2,15 @@
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+* {
+    font-family: var(--system-ui);
+    color: #232324;
+}
+
 
 @font-face {
-    font-family: 'Norse';
-    font-size: 18px;
-    src: url('/assets/images/Norse-Bold.otf') format("OpenType");
+    font-family: Norse;
+    src: url("/assets/images/Norse-Bold.otf") format("opentype");
   }
 
 body {
@@ -21,7 +25,7 @@ div {
 }
 
 #left-side {
-    width: 30vw;
+    width: 40vw;
     height: 100vh;
 }
 
@@ -32,7 +36,7 @@ div {
 
 .card-img {
     /* position: absolute; */
-    width: 30vw;
+    width: 40vw;
     height: 100vh;
     margin: 0px;
     z-index: -1;
@@ -70,7 +74,9 @@ div {
 }
 
 .attempt > h2 {
-    font-family: 'Norse', var(--system-ui);
+    font-family: Norse, var(--system-ui);
+    color: white;
+    font-size: x-large;
 }
 
 .attempt > img {
@@ -78,6 +84,27 @@ div {
 }
 
 #right-side {
-    background-color: blue;
     height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F9FAFB;
 }
+
+#right-side > div {
+    margin-left: 30px;
+}
+
+.top-content > p {
+    /* display: flex; */
+    font-family: var(--system-ui);
+    font-weight: bold;
+    max-width: 60%;
+    
+}
+
+.emphasize {
+    font-style: italic;
+}
+
