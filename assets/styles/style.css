@@ -2,6 +2,11 @@
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+
+
+
+
 * {
     font-family: var(--system-ui);
     color: #232324;
@@ -13,11 +18,16 @@
     src: url("/assets/images/Norse-Bold.otf") format("opentype");
   }
 
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: row;
     margin: 0;
     /* overflow-y: hidden; */
+    min-height: 100%;
 }
 
 div {
@@ -27,15 +37,16 @@ div {
 #left-side {
     width: 40vw;
     height: 100vh;
+    margin: 0;
 }
 
 .card-container {
     position: relative;
-
+    margin: 0;
 }
 
 .card-img {
-    /* position: absolute; */
+    position: absolute;
     width: 40vw;
     height: 100vh;
     margin: 0px;
@@ -101,7 +112,7 @@ div {
     font-family: var(--system-ui);
     font-weight: bold;
     max-width: 60%;
-    
+    margin-bottom: 30px;
 }
 
 .emphasize {
@@ -153,10 +164,24 @@ input:focus {
     
 }
 
+.bottom-content {
+    margin-top: 30px;
+}
 
+button {
+    font-weight: bold;
+    padding: 12px 40px 12px 40px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: #596D48;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
-
-
+.greenSpan {
+    color: green;
+    font-weight: bold;
+}
 
 
 input::-webkit-outer-spin-button,
